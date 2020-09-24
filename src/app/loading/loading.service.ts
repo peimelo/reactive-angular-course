@@ -8,6 +8,8 @@ export class LoadingService {
 
   loading$: Observable<boolean> = this.loadingSubject.asObservable();
 
+  constructor() {}
+
   showLoaderUntilCompleted<T>(obs$: Observable<T>): Observable<T> {
     return of(null).pipe(
       tap(() => this.loadingOn()),
