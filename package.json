@@ -6,10 +6,12 @@
     "ng": "ng",
     "start": "./node_modules/.bin/ng serve  --proxy-config ./proxy.json",
     "server": "./node_modules/.bin/ts-node -P ./server/server.tsconfig.json ./server/server.ts",
-    "build": "ng build",
+    "build": "ng build --prod",
+    "build:backend": "tsc ./server/server.ts --outdir ./dist",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "npm run build && npm run build:backend"
   },
   "private": true,
   "dependencies": {
