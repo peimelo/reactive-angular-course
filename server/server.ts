@@ -25,7 +25,7 @@ app.route('/api/login').post(loginUser);
 const appName = 'reactive-angular-course';
 
 // local onde build ira gerar os arquivos
-const outputPath = `${__dirname}/dist/${appName}`;
+const outputPath = `${__dirname}/${appName}`;
 
 // seta o diretorio de build para servir o conteudo estatico
 app.use(express.static(outputPath));
